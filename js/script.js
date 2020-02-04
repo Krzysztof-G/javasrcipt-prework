@@ -13,7 +13,7 @@ if(randomNumber == 1){
 } else if(randomNumber == 3){
     computerMove = 'nozyce';
 }
-printMessage('Mój ruch to: ' + computerMove);
+printMessage('Komputer: ' + computerMove);
 
 let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
@@ -28,4 +28,4 @@ if(playerInput == '1'){
 } else if(playerInput == '3'){
     playerMove = 'nozyce';
 }
-printMessage('Twój ruch to: ' + playerMove);
+printMessage('Gracz: ' + playerMove);
