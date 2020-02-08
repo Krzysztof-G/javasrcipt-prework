@@ -46,7 +46,7 @@ function playGame(playerInput) {
     }
   }
 
-  let randomNumber = Math.floor(Math.random() * 4 + 1);
+  let randomNumber = Math.floor(Math.random() * 3 + 1);
 
   console.log('Wylosowana liczba to: ' + randomNumber);
 
@@ -61,18 +61,23 @@ function playGame(playerInput) {
   printMessage('Wynik: ' + displayResult(computerMove, playerMove)); 
 }
 function buttonClicked(){
-  playGame(1) 
+  printMessage('Guzik został kliknięty');
 }
 let playRock = document.getElementById('play-rock');
   
-  playRock.addEventListener('click', buttonClicked);
-
+  playRock.addEventListener('click', function () { 
+    playGame(1);
+  })
 let playPaper = document.getElementById('play-paper');
    
-  playPaper.addEventListener('click', buttonClicked);
+  playPaper.addEventListener('click', function() {
+    playGame(2);
+  })
 
 let playScissors = document.getElementById('play-scissors');
    
-  playScissors.addEventListener('click', buttonClicked);  
+  playScissors.addEventListener('click', function() {
+    playGame(3);
+  })  
   
   
