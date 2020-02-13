@@ -45,6 +45,7 @@
 
   const playGame = function (playerInput) {
     clearMessages();
+    clearResult();
     let randomNumber = Math.floor(Math.random() * 3 + 1);
     console.log('Wylosowana liczba to: ' + randomNumber);
     let computerMove = getMoveName(randomNumber);
@@ -82,6 +83,8 @@
   document.getElementById('play-again').style.display = 'none';
 
   launchGame.addEventListener('click', function () {
+    computerPoints = 0;
+    playerPoints = 0;
     numberOfRounds = prompt('Ile rund ma trwać rozgrywka?');
     document.getElementById('play-rock').style.display = 'inline';
     document.getElementById('play-paper').style.display = 'inline';
